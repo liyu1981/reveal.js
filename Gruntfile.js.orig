@@ -15,9 +15,9 @@ module.exports = function(grunt) {
 				' */'
 		},
 
-		//qunit: {
-		//	files: [ 'test/*.html' ]
-		//},
+		qunit: {
+			files: [ 'test/*.html' ]
+		},
 
 		uglify: {
 			options: {
@@ -62,48 +62,48 @@ module.exports = function(grunt) {
 			}
 		},
 
-		//jshint: {
-		//	options: {
-		//		curly: false,
-		//		eqeqeq: true,
-		//		immed: true,
-		//		latedef: true,
-		//		newcap: true,
-		//		noarg: true,
-		//		sub: true,
-		//		undef: true,
-		//		eqnull: true,
-		//		browser: true,
-		//		expr: true,
-		//		globals: {
-		//			head: false,
-		//			module: false,
-		//			console: false,
-		//			unescape: false
-		//		}
-		//	},
-		//	files: [ 'Gruntfile.js', 'js/reveal.js' ]
-		//},
+		jshint: {
+			options: {
+				curly: false,
+				eqeqeq: true,
+				immed: true,
+				latedef: true,
+				newcap: true,
+				noarg: true,
+				sub: true,
+				undef: true,
+				eqnull: true,
+				browser: true,
+				expr: true,
+				globals: {
+					head: false,
+					module: false,
+					console: false,
+					unescape: false
+				}
+			},
+			files: [ 'Gruntfile.js', 'js/reveal.js' ]
+		},
 
-		//connect: {
-		//	server: {
-		//		options: {
-		//			port: port,
-		//			base: '.'
-		//		}
-		//	}
-		//},
+		connect: {
+			server: {
+				options: {
+					port: port,
+					base: '.'
+				}
+			}
+		},
 
-		//zip: {
-		//	'reveal-js-presentation.zip': [
-		//		'index.html',
-		//		'css/**',
-		//		'js/**',
-		//		'lib/**',
-		//		'images/**',
-		//		'plugin/**'
-		//	]
-		//},
+		zip: {
+			'reveal-js-presentation.zip': [
+				'index.html',
+				'css/**',
+				'js/**',
+				'lib/**',
+				'images/**',
+				'plugin/**'
+			]
+		},
 
 		watch: {
 			main: {
@@ -122,31 +122,28 @@ module.exports = function(grunt) {
 	});
 
 	// Dependencies
-	//grunt.loadNpmTasks( 'grunt-contrib-qunit' );
-	//grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
+	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-sass' );
-	//grunt.loadNpmTasks( 'grunt-contrib-connect' );
-	//grunt.loadNpmTasks( 'grunt-zip' );
+	grunt.loadNpmTasks( 'grunt-contrib-sass' );
+	grunt.loadNpmTasks( 'grunt-contrib-connect' );
+	grunt.loadNpmTasks( 'grunt-zip' );
 
 	// Default task
-	//grunt.registerTask( 'default', [ 'jshint', 'cssmin', 'uglify', 'qunit' ] );
-	//grunt.registerTask( 'default', [ 'cssmin', 'uglify' ] );
+	grunt.registerTask( 'default', [ 'jshint', 'cssmin', 'uglify', 'qunit' ] );
 
 	// Theme task
 	grunt.registerTask( 'themes', [ 'sass' ] );
-  grunt.registerTask( 'default', [ 'themes' ]);
-	//grunt.registerTask( 'themes', [ 'sass' ] );
 
 	// Package presentation to archive
-	//grunt.registerTask( 'package', [ 'default', 'zip' ] );
+	grunt.registerTask( 'package', [ 'default', 'zip' ] );
 
 	// Serve presentation locally
-	//grunt.registerTask( 'serve', [ 'connect', 'watch' ] );
+	grunt.registerTask( 'serve', [ 'connect', 'watch' ] );
 
 	// Run tests
-	//grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
+	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
 
 };
