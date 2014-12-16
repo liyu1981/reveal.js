@@ -40,6 +40,7 @@ module.exports = function(grunt) {
 		sass: {
 			main: {
 				files: {
+          'css/dp-reveal-overide.css': 'css/dp-reveal-overide.scss',
 					'css/theme/default.css': 'css/theme/source/default.scss',
 					'css/theme/beige.css': 'css/theme/source/beige.scss',
 					'css/theme/night.css': 'css/theme/source/night.scss',
@@ -112,6 +113,7 @@ module.exports = function(grunt) {
 			},
 			theme: {
 				files: [
+          'css/*.scss',
           'css/theme/source/*.scss', 'css/theme/template/*.scss',
           'css/dp-theme/source/*.scss', 'css/dp-theme/template/*.scss'
         ],
@@ -137,7 +139,7 @@ module.exports = function(grunt) {
 
 	// Theme task
 	grunt.registerTask( 'themes', [ 'sass' ] );
-  grunt.registerTask( 'default', [ 'themes' ]);
+  grunt.registerTask( 'default', [ 'themes', 'cssmin' ]);
 	//grunt.registerTask( 'themes', [ 'sass' ] );
 
 	// Package presentation to archive

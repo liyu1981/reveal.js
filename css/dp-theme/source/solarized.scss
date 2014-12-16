@@ -3,7 +3,6 @@
  * Author: Achim Staebler
  */
 
-
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
@@ -30,10 +29,6 @@
 /**
  * Solarized colors by Ethan Schoonover
  */
-html * {
-	color-profile: sRGB;
-	rendering-intent: auto;
-}
 
 // Solarized colors
 $base03:    #002b36;
@@ -68,7 +63,14 @@ $selectionBackgroundColor: $magenta;
 // }
 
 
+.dp-reveal-theme-solarized {
+  color-profile: sRGB;
+	rendering-intent: auto;
 
-// Theme template ------------------------------
-@import "../template/theme";
-// ---------------------------------------------
+	@include bodyBackground();
+	background-color: $backgroundColor;
+
+  // Theme template ------------------------------
+  @import "../template/theme";
+  // ---------------------------------------------
+}

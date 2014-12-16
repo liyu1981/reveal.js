@@ -32,7 +32,11 @@ $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 
+.dp-reveal-theme-simple {
+	@include bodyBackground();
+	background-color: $backgroundColor;
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+}

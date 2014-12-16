@@ -4,11 +4,6 @@
  * GLOBAL STYLES
  *********************************************/
 
-body {
-	@include bodyBackground();
-	background-color: $backgroundColor;
-}
-
 .reveal {
 	font-family: $mainFont;
 	font-size: $mainFontSize;
