@@ -55,6 +55,7 @@
 }
 
 .dp-reveal {
+  height: 100%;
   perspective: 400px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -63,6 +64,7 @@
     box-shadow: #333 0px 0px 20px;
     transition: all 0.3s ease-in-out;
     opacity: 1;
+    overflow: hidden;
 
     &-wait {
       transform: rotateX(8deg) scale(0.78);
@@ -76,6 +78,14 @@
 
     .sl-block {
       position: absolute;
+    }
+
+    .progress {
+      margin-bottom: 0px;
+    }
+
+    .controls {
+      bottom: 0px;
     }
   }
 
