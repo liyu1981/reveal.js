@@ -30,6 +30,11 @@ $selectionBackgroundColor: #e7ad52;
 $mainFontSize: 30px;
 
 
+.dp-reveal-theme-night {
+  @include bodyBackground();
+  background-color: $backgroundColor;
+
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+}

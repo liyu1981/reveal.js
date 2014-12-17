@@ -30,6 +30,11 @@ $selectionBackgroundColor: #26351C;
 }
 
 
+.dp-reveal-theme-serif {
+	@include bodyBackground();
+	background-color: $backgroundColor;
+
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+}

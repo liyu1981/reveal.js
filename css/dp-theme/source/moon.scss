@@ -62,7 +62,11 @@ $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: $magenta;
 
 
+.dp-reveal-theme-moon {
+  @include bodyBackground();
+  background-color: $backgroundColor;
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+}

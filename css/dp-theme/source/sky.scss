@@ -40,7 +40,11 @@ $selectionBackgroundColor: #134674;
 }
 
 
+.dp-reveal-theme-sky {
+	@include bodyBackground();
+	background-color: $backgroundColor;
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+}
